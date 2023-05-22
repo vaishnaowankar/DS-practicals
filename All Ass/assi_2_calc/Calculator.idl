@@ -1,0 +1,12 @@
+module CalculatorApp{
+
+	interface Calculator
+    {
+        exception DivisionByZero {};
+
+		float getSum(in float a, in float b);
+		float getSub(in float a, in float b);
+		float getProduct(in float a, in float b);
+		float getQuotient(in float a, in float b) raises (DivisionByZero);
+	};
+};
